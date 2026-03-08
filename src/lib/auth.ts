@@ -6,6 +6,26 @@ import { eq } from "drizzle-orm";
 
 const ADMIN_SESSION_COOKIE = "admin_session";
 
+// Default admin credentials
+const DEFAULT_ADMIN_EMAIL = "lost.lil.bot@gmail.com";
+const DEFAULT_ADMIN_PASSWORD = "Sunbeam99!!@@";
+
+// Ensure default admin exists
+export async function ensureDefaultAdmin() {
+  const existingAdmin = await db.select().from(admins).where(eq(admins.email, DEFAULT_ADMIN_EMAIL)).limit(1);
+  
+  if (existingAdmin.length === 0) {
+    const hashedPassword = await hashPassword(DEFAULT_ADMIN_PASSWORD);
+    await db.insert(admins).values({
+      email: DEFAULT_ADMIN_EMAIL,
+      password: hashedPassword,
+      name: "Admin",
+      role: "admin",
+    });
+    console.log("Default admin user created");
+  }
+}
+
 export async function hashPassword(password: string): Promise<string> {
   return bcrypt.hash(password, 10);
 }

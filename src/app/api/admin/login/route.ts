@@ -1,8 +1,11 @@
 import { NextResponse } from "next/server";
-import { loginAdmin } from "@/lib/auth";
+import { loginAdmin, ensureDefaultAdmin } from "@/lib/auth";
 
 export async function POST(request: Request) {
   try {
+    // Ensure default admin exists
+    await ensureDefaultAdmin();
+    
     const body = await request.json();
     const { email, password } = body;
 

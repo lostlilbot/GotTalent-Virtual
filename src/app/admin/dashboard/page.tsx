@@ -1,7 +1,10 @@
 import { redirect } from "next/navigation";
-import { getCurrentAdmin, logoutAdmin } from "@/lib/auth";
+import { getCurrentAdmin, logoutAdmin, ensureDefaultAdmin } from "@/lib/auth";
 
 export default async function AdminDashboard() {
+  // Ensure default admin exists
+  await ensureDefaultAdmin();
+  
   const admin = await getCurrentAdmin();
 
   if (!admin) {
