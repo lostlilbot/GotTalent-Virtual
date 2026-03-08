@@ -4,7 +4,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center min-h-[80vh] px-4 text-center">
         <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent mb-6">
-          GotTalent-Virtual
+          Star Quest
         </h1>
         <p className="text-xl md:text-2xl text-neutral-300 max-w-2xl mb-8">
           Discover and showcase amazing talents from around the world. 
@@ -46,7 +46,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-8 text-center text-neutral-500">
-        <p>© 2026 GotTalent-Virtual. All rights reserved.</p>
+        <p>© 2026 Star Quest. All rights reserved.</p>
       </footer>
     </main>
   );

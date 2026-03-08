@@ -1,6 +1,8 @@
 import { redirect } from "next/navigation";
 import { getCurrentAdmin, logoutAdmin, ensureDefaultAdmin } from "@/lib/auth";
 
+export const dynamic = 'force-dynamic';
+
 export default async function AdminDashboard() {
   // Ensure default admin exists
   await ensureDefaultAdmin();

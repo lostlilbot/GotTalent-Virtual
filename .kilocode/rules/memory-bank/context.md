@@ -14,7 +14,7 @@ The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. I
 - [x] ESLint configuration
 - [x] Memory bank documentation
 - [x] Recipe system for common features
-- [x] Add landing page for GotTalent-Virtual platform
+- [x] Add landing page for Star Quest platform
 - [x] Add admin/judge authentication system with database
 - [x] Create admin user (lost.lil.bot@gmail.com)
 
@@ -91,4 +91,4 @@ export async function GET() {
 |------|---------|
 | Initial | Template created with base setup |
 | 2026-03-08 | Added admin/judge authentication with database |
-| 2026-03-08 | Added landing page for GotTalent-Virtual platform |
+| 2026-03-08 | Added landing page for Star Quest platform |

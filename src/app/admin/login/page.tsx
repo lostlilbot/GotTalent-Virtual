@@ -43,7 +43,7 @@ export default function AdminLoginPage() {
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-            GotTalent-Virtual
+            Star Quest
           </h1>
           <p className="text-neutral-400 mt-2">Admin / Judge Login</p>
         </div>
